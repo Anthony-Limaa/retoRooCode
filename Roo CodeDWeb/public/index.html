@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Citas Médicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Reserva tu Cita Médica</h1>
+        
+        <form id="appointmentForm">
+            <div class="form-group">
+                <label for="client_name">Nombre Completo:</label>
+                <input type="text" id="client_name" name="client_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Fecha:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Hora:</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+
+            <div class="form-group">
+                <label for="service_type">Tipo de Servicio:</label>
+                <select id="service_type" name="service_type" required>
+                    <option value="">Seleccione un servicio</option>
+                    <option value="Consulta General">Consulta General</option>
+                    <option value="Especialidad">Especialidad</option>
+                    <option value="Emergencia">Emergencia</option>
+                </select>
+            </div>
+
+            <button type="submit">Reservar Cita</button>
+        </form>
+
+        <div id="message" class="message"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
